@@ -200,6 +200,7 @@ class Link extends DataObject implements
                 )
                 ->setValue('URL'),
                 Wrapper::create(
+                    'FileWrapper',
                     TreeDropdownField::create(
                         'FileID',
                         _t(__CLASS__ . '.FILE', 'File'),
