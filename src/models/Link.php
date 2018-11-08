@@ -199,8 +199,7 @@ class Link extends DataObject implements
                     $this->i18nTypes
                 )
                 ->setValue('URL'),
-                Wrapper::create([
-                    $title = 'FileWrapper',
+                Wrapper::create(
                     TreeDropdownField::create(
                         'FileID',
                         _t(__CLASS__ . '.FILE', 'File'),
@@ -208,7 +207,7 @@ class Link extends DataObject implements
                         'ID',
                         'Title'
                     )
-                ])
+                )
                 ->displayIf('Type')->isEqualTo('File')->end(),
                 Wrapper::create(
                     TextField::create(
